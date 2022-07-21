@@ -9,10 +9,12 @@
         android:id="@+id/error_msg"
         android:textColor="?android:textColorPrimary"
         android:textSize="@dimen/error_text_size"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textAlignment="center"
+        android:layout_margin="5dp"
         tools:text="Timeout"/>
     <androidx.core.widget.ContentLoadingProgressBar
         android:id="@+id/progress_bar"
@@ -20,10 +22,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"/>
-    <Button
+    <ImageButton
         android:id="@+id/retry_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:src="@drawable/ic_retry"
+        android:backgroundTint="@color/github_blue"
         android:text="@string/retry"/>
 </LinearLayout>

@@ -11,7 +11,6 @@ import java.io.IOException
 import javax.inject.Inject
 
 class GithubRepoPagingSource @Inject constructor(
-//    private val repository: GithubRepoRepository
     private val api: GithubReposApi
 ) : PagingSource<Int, GithubRepoDto>() {
     override fun getRefreshKey(state: PagingState<Int, GithubRepoDto>): Int? {

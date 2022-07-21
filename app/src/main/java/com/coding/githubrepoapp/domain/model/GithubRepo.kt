@@ -18,8 +18,7 @@ data class GithubRepo(
         parcel.readString(),
         parcel.readInt(),
         parcel.readParcelable(Owner::class.java.classLoader)
-    ) {
-    }
+    )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(id)
