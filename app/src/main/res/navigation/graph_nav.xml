@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/repoListFragment"
+        android:name="com.coding.githubrepoapp.presentation.githubrepo_list.RepoListFragment"
+        android:label="fragment_repo_list"
+        tools:layout="@layout/fragment_repo_list" >
+        <action
+            android:id="@+id/action_repoListFragment_to_repoDetailFragment"
+            app:destination="@id/repoDetailFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/repoDetailFragment"
+        android:name="com.coding.githubrepoapp.presentation.githubrepo_detail.RepoDetailFragment"
+        android:label="fragment_repo_detail"
+        tools:layout="@layout/fragment_repo_detail" >
+        <action
+            android:id="@+id/action_repoDetailFragment_to_repoListFragment"
+            app:destination="@id/repoListFragment"
+           />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.coding.githubrepoapp.presentation.splash_screen.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_repoListFragment"
+            app:destination="@id/repoListFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/graph_nav"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+</navigation>
